@@ -1,0 +1,41 @@
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+
+# Python & Virtual Environments
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.python-version
+
+# Large Data & Database Files (16M+ records / local DBs)
+*.parquet
+*.csv
+*.sqlite
+*.sqlite3
+*.db
+sales_data.db
+data/*.parquet
+data/*.csv
+data/*.db
+
+# Streamlit Local Settings
+.streamlit/secrets.toml
+
+# IDE & OS Specific Files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# CrewAI & LLM Cache / Logs
+.crewai/
+*.log
+logs/
