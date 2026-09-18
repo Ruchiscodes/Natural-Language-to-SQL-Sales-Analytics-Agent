@@ -1,0 +1,25 @@
+sql_generation_task:
+  description: >
+    Convert the user query "{user_query}" into a valid, highly optimized SQLite SQL query for the `sales` table.
+    Table schema: sales(transaction_id, date, customer_id, region, product_category, amount, quantity).
+  expected_output: >
+    A single valid SQL query string without markdown code blocks or conversational text.
+
+sql_validation_task:
+  description: >
+    Review the generated SQL query for syntax errors, optimal SQLite performance, and schema accuracy.
+    Query to check: {generated_sql}
+  expected_output: >
+    A verified, production-ready SQL query string ready for execution.
+
+insight_generation_task:
+  description: >
+    Execute the validated SQL query on the database using the available DB tool and extract key business insights from the output.
+  expected_output: >
+    An executive summary report containing bullet points on business findings, key metrics, and strategic takeaways.
+
+visualization_task:
+  description: >
+    Generate a Plotly-compatible JSON specification or visual layout payload based on the query execution results.
+  expected_output: >
+    A valid JSON string or Python dictionary representing Plotly figure configurations for rendering in Streamlit.
